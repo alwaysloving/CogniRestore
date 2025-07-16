@@ -1,6 +1,6 @@
 # CognitionCapturer - Graduation Project
 
-This repository contains the refactored and improved implementation of CognitionCapturer for my graduation project, originally based on the AAAI 2025 paper: "CognitionCapturer: Decoding Visual Stimuli from Human EEG Signals with Multimodal Information."
+This repository contains the refactored and improved implementation of CognitionCapturer for my graduation project, a multimodal EEG-based visual reconstruction system that uses diffusion models to decode and reconstruct visual images from human brain signals. The implementation is originally based on the AAAI 2025 paper: ["CognitionCapturer: Decoding Visual Stimuli from Human EEG Signals with Multimodal Information"](https://arxiv.org/pdf/2412.10489).
 
 ## Project Overview
 
@@ -90,8 +90,6 @@ conda activate BCI
 
 Dataset follows the Data availability Section of the original [EEG_Image_decode](https://github.com/dongyangli-del/EEG_Image_decode) repository. Please follow their README to download the EEG dataset.
 
-**Reconstruction Results**: Available at https://drive.google.com/file/d/1PfuXZo8JQ7SYsSsYpsUtswdq5gmWKLRU/view?usp=drive_link
-
 **Pre-trained Models Used**:
 - SDXL-Turbo: https://huggingface.co/stabilityai/sdxl-turbo
 - IP-Adapter: https://huggingface.co/h94/IP-Adapter
@@ -123,31 +121,11 @@ python src/Scripts/train_align/main.py
 python src/Scripts/generation/multiadapter/ip_adapter_testing.py
 ```
 
-### Key Improvements in Training
-- **Stability**: Fixed training instability issues in the original implementation
-- **Efficiency**: Optimized data loading and GPU memory usage
-- **Reproducibility**: Added seed management and deterministic training options
-
-## Results and Evaluation
-
-The refactored implementation achieves comparable or improved performance compared to the original work, with enhanced:
-- Training stability and convergence
-- Code maintainability and readability
-- Error handling and debugging capabilities
-- Reproducibility across different environments
-
-## Future Work
-
-- [ ] Further optimize memory usage for larger datasets
-- [ ] Add support for additional EEG preprocessing techniques
-- [ ] Implement more comprehensive evaluation metrics
-- [ ] Create a web interface for easy demonstration
-
 ## Acknowledgements
 
 ### Original Work
 This project is based on the outstanding work of:
-- Zhang et al. (2025) - CognitionCapturer: Decoding Visual Stimuli from Human EEG Signals with Multimodal Information
+- [CognitionCapturer](https://github.com/XiaoZhangYES/CognitionCapturer)
 - [EEG_Image_decode](https://github.com/dongyangli-del/EEG_Image_decode)
 - [lightning-hydra-template](https://github.com/ashleve/lightning-hydra-template)
 - [NICE-EEG](https://github.com/eeyhsong/NICE-EEG)
@@ -157,18 +135,4 @@ Original dataset available at: https://www.sciencedirect.com/science/article/pii
 
 Special thanks to Dr. Jili Xia for her contributions to the original work.
 
-## Citation
 
-If you use this refactored implementation in your research, please cite both the original paper and acknowledge this graduation project:
-
-```bibtex
-@inproceedings{zhang2025cognitioncapturer,
-  title={Cognitioncapturer: Decoding visual stimuli from human eeg signal with multimodal information},
-  author={Zhang, Kaifan and He, Lihuo and Jiang, Xin and Lu, Wen and Wang, Di and Gao, Xinbo},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={39},
-  number={13},
-  pages={14486--14493},
-  year={2025}
-}
-```
