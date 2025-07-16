@@ -10,12 +10,6 @@ This graduation project builds upon the original CognitionCapturer framework, wi
 - **Functionality Restoration**: Made the entire pipeline runnable and reproducible
 - **Documentation Enhancement**: Improved code documentation and usage instructions
 
-<p align="center">
-  <a href="#">
-  <p align="center">
-    <a href='https://arxiv.org/pdf/2412.10489'><img src='http://img.shields.io/badge/Original%20Paper-arxiv.2412.10489-B31B1B.svg'></a>
-  </p>
-</p>
 
 <img src="Figs/fig1.png" alt="Framework" style="max-width: 100%; height: auto;"/>
   
